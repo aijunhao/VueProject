@@ -5,6 +5,7 @@ import store from './store'
 import { Header } from 'mint-ui'
 import 'mint-ui/lib/style.css'
 import './lib/mui/css/mui.min.css'
+import './lib/mui/css/icons-extra.css'
 
 Vue.config.productionTip = false
 Vue.component(Header.name, Header)
