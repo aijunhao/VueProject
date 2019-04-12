@@ -8,7 +8,15 @@ module.exports = {
   // webpack-dev-server 相关配置
   devServer: {
     open: true,
-    port: 4000
+    port: 4000,
+    // 跨域请求
+    proxy: {
+      '/': {
+        target: 'http://127.0.0.1:3000',
+        ws: false,
+        changeOrigin: true
+      }
+    }
   },
   // 第三方插件配置
   pluginOptions: {

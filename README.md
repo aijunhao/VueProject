@@ -39,3 +39,17 @@
     - ShopcarComponent.vue
 
 4. 给 `router.js` 导入路由组件并挂载
+
+## 制作首页轮播图
+
+1. 轮播图布局使用 `Mint-UI` 组件，局部导入 `Swipe`和`SwipeItem`，在首页使用时，需要注意要获取轮播图的类名（实时编译查看），并设置其高度，其默认高度为0。
+
+2. vue-axios 轮播图数据加载。
+
+    `npm i -S axios` 下载 `axios` 并导入到入口文件。
+
+3. 在 vue.config.js 中配置代理，使用 NodeProject 提供的 swipeItemList 模拟数据。
+
+4. 获取到数据，保存到 data 上。
+
+5. 使用 v-for 循环渲染到每个 item 中。
