@@ -69,3 +69,34 @@
     - 使用 css 过渡，但是不能简单的使用 `out-in` 过渡模式，有一个空白时间差。
 
     - 目前使用 css 过渡，加 `.v-leave-to` 类设置 `position: absolute;` 离开过程脱离文档流来实现平滑过渡且没有空白时间差。
+
+## 新闻页面路由搭建
+
+1. 在 "components" 文件夹下创建 "news" 文件夹，创建 "NewsList.vue" 新闻页面。
+
+2. “首页” 新闻页面超链接按钮改造为 `router-link`，顺便把其他几个链接也改造了。
+
+3. 使用 `/home/newslist` 路由地址，挂载根目录，而不是作为 `/home` 的子组件。
+
+## 新闻页面搭建
+
+1. 绘制界面，使 “media-list.html” 改造。
+
+2. `axios` 获取数据，使用 NodeProject 提供的 newsListApi.josn 模拟数据。
+
+3. 渲染数据。
+
+## 增加首页底边距。
+
+## 时间格式化
+
+    从接口中传过来的数据不是我们熟悉的时间格式，我们定义全局过滤器来进行格式化。
+
+    1. 安装 moment 插件
+    ```shell
+    > npm i -S moment
+    ```
+
+    2. 创建 dataFormat 全局过滤器。
+
+    3. 在 NewsList.vue 页面通过管道符使用过滤器。

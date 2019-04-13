@@ -4,6 +4,7 @@ import Home from './components/tabbar/HomeComponent.vue'
 import Member from './components/tabbar/MemberComponent.vue'
 import Search from './components/tabbar/SearchComponent.vue'
 import Shopcar from './components/tabbar/ShopcarComponent.vue'
+import NewsList from './components/news/NewsList.vue'
 
 Vue.use(Router)
 
@@ -28,6 +29,10 @@ export default new Router({
     {
       path: '/shopcar',
       component: Shopcar
+    },
+    {
+      path: '/home/newslist',
+      component: NewsList
     }
   ],
   linkActiveClass: 'mui-active'

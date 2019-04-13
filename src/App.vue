@@ -34,6 +34,7 @@
 <style lang="stylus">
 #app {
   padding-top: 40px;
+  padding-bottom: 51px;
   overflow-x: hidden;
 }
 
