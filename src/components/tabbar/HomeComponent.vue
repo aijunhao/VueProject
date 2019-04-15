@@ -45,7 +45,6 @@
             <div class="mui-media-body">联系我们</div>
           </router-link>
         </li>
-
       </ul>
     </div>
   </div>
@@ -68,23 +67,15 @@ export default {
     getSwipe() {
       this.$axios({
         method: 'get',
-        url: '/swipeItems'
+        url: '/swipeitems'
       }).then(
         res => {
-          console.log('获取成功', res.data)
-          if (res.data.swipeItems.status === 0) {
-            // 加载轮播图成功
-            this.swipeItemList = res.data.swipeItems.message
-            // console.log(this.swipeItemList)
-            // Toast("加载轮播图成功")
-          } else {
-            // 加载轮播图失败
-            Toast("加载轮播图失败")
-          }
+          console.log('swipeitems 获取成功', res.data)
+          this.swipeItemList = res.data
         }
       ).catch(
         err => {
-          console.log('获取失败', err)
+          console.log('swipeitems 获取失败', err)
         }
       )
     }
