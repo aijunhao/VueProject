@@ -1,6 +1,8 @@
 <template>
   <div class="newsinfo-container">
+    <!-- 标题 -->
     <h3 class="title">{{ news.title }}</h3>
+    <!-- 子标题 -->
     <div class="subtitle">
       <span>发表时间：{{ news.publishTime | dataFormat('YYYY-MM-DD HH:mm:ss') }}</span>
       <span>浏览次数：{{ news.clickNumber }}</span>
@@ -8,11 +10,17 @@
 
     <hr>
 
+    <!-- 内容区 -->
     <div class="content" v-html="news.zhaiyao"></div>
+
+    <!-- 评论区 -->
+    <comment-box :id="this.id"></comment-box>
   </div>
 </template>
 
 <script>
+import comment from '../subcomponents/comment.vue'
+
 export default {
   data() {
     return {
@@ -39,6 +47,10 @@ export default {
         }
       )
     }
+  },
+  components: {
+    // 注册子组件
+    "comment-box": comment
   }
 }
 </script>
