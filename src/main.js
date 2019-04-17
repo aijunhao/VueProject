@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import qs from 'qs'
 import App from './App.vue'
 import router from './router'
 import store from './store'
@@ -16,6 +17,7 @@ Vue.component(SwipeItem.name, SwipeItem)
 Vue.component(Button.name, Button)
 Vue.component(Loadmore.name, Loadmore)
 
+Vue.prototype.$qs = qs
 Vue.prototype.$axios = axios
 
 // 定义全局过滤器

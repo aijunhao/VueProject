@@ -4,9 +4,9 @@
     <br>
     <h3>发表评论</h3>
     <hr>
-    <textarea rows="3" placeholder="最多发表120字" maxlength="120"></textarea>
+    <textarea rows="3" placeholder="最多发表120字" maxlength="120" v-model="msg"></textarea>
 
-    <mt-button type="primary" size="large">发表评论</mt-button>
+    <mt-button type="primary" size="large" @click="publishComment">发表评论</mt-button>
 
     <br>
     <h3>评论</h3>
@@ -42,7 +42,8 @@ export default {
       pageIndex: 1,
       comments: [],
       tips: "加载更多",
-      status: true
+      status: true,
+      msg: ''
     }
   },
   created() {
@@ -74,7 +75,37 @@ export default {
       } else {
         Toast('已加载所有数据')
       }
-
+    },
+    publishComment() {
+      if (this.msg.trim().lenth === 0) {
+        return Toast('评论内容不能为空！')
+      }
+      this.$axios({
+        method: 'post',
+        url: '/postcomment',
+        data: {
+          artid: this.id,
+          content: this.msg.trim()
+        },
+      }).then(
+        res => {
+          if (res.status === 200) {
+            console.log('成功', res)
+            // 重新加载评论
+            this.comments = []
+            this.pageIndex = 1
+            this.msg = ''
+            this.getComment()
+          } else {
+            Toast('评论发表失败，请重试！')
+          }
+          
+        }
+      ).catch(
+        err => {
+          console.log(err)
+        }
+      )
     }
   },
   props: ["id"]
