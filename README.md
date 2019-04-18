@@ -78,7 +78,7 @@
 
 3. 使用 `/home/newslist` 路由地址，挂载根目录，而不是作为 `/home` 的子组件。
 
-## 新闻页面搭建
+## NewsList.vue 新闻列表页面搭建
 
 1. 绘制界面，使 “media-list.html” 改造。
 
@@ -101,7 +101,7 @@
 
     3. 在 NewsList.vue 页面通过管道符使用过滤器。
 
-## 实现新闻详情页面
+## NewsInfo.vue 新闻详情页面
 
 1. 把列表改造成 router-link。
 
@@ -123,7 +123,7 @@
 
 4. 使用 v-html 渲染内容数据，删除 style 标签的 scoped，修改内容图片大小。
 
-## 评论子组件
+##  Comments.vue 评论子组件
 
 1. 在 components 文件夹下创建 subcomponents 子文件夹，放置子组件模板，创建 comment.vue 评论子组件模板。
 
@@ -152,3 +152,16 @@
 4. 使用 post 将数据发送给服务器，需要传递楼主 id 和 评论内容。
 
 5. 重载页面，清空评论 comments 列表和 msg 文本框，重置 pageIndex ，然后重新加载即可。
+
+## Photos.vue 图片页面
+
+1. 创建路由
+
+2. 图片页面顶部有横向滚动组件，使用 better-scroll 组件。
+
+3. 安装 `npm i -S better-scroll`，大概使用一下
+
+4. BScroll 创建需要在 mounted 中使用。
+
+5. 父容器和子容器都需要具体大小，才能设置浮动。
+
