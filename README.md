@@ -165,3 +165,13 @@
 
 5. 父容器和子容器都需要具体大小，才能设置浮动。
 
+## Photos.vue 图片页面横向滚动组件改造
+
+1. 设置激活状态颜色类 active 和默认颜色类 default，默认选中 id 为 defaultId === 0
+
+2. 绑定点击事件，点击时如果当前 id 不等于 defaultId，则 defaultId = id
+
+## 图片列表区域
+
+1. 使用 `Mint-UI` 懒加载。
+
