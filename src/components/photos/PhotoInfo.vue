@@ -10,7 +10,9 @@
 
     <hr>
 
+    <!-- 内容区 -->
     <div>
+      <!-- 缩略图 -->
       <vue-preview
         :list="list"
         :thumbImageStyle="{width: '30%', margin: '1%'}"
@@ -21,10 +23,14 @@
       />
     </div>
     
+    <!-- 评论区 -->
+    <comment-box :id="id"></comment-box>
   </div>
 </template>
 
 <script>
+import Comment from '../subcomponents/Comments.vue'
+
 export default {
   data() {
     return {
@@ -66,7 +72,10 @@ export default {
       console.log('destroyHandler')
     }
   },
-  props: ['id']
+  props: ['id'],
+  components: {
+    'comment-box': Comment
+  }
 }
 </script>
 
