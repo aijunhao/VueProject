@@ -2,7 +2,7 @@
   <div class="app">
     <!-- 顶部横向导航 -->
     <div class="wrapper">
-      <ul class="content">
+      <ul class="content-list">
         <li v-for="item in cates" :key="item.id">
           <a
             :class="[item.id === defaultId ? 'active': 'default']"
@@ -16,13 +16,13 @@
 
     <!-- 图片列表 -->
     <ul class="photolist">
-      <li v-for="item in photoList" :key="item._id">
+      <router-link v-for="item in photoList" :key="item._id" tag="li" :to="'/home/photoinfo/' + item._id">
         <img v-lazy="item.img_url">
         <div class="info">
           <h1 class="info-title">{{ item.title }}</h1>
           <h1 class="info-body">{{ item.zhaiyao }}</h1>
         </div>
-      </li>
+      </router-link>
     </ul>
   </div>
 </template>
@@ -87,12 +87,12 @@ export default {
   margin: 0 auto;
   overflow: hidden;
 }
-.content {
+.content-list {
   width: 480px;
   margin: 5px;
   padding: 0px;
 }
-.content li {
+.content-list li {
   text-align: center;
   display: inline-block;
   width: 80px;

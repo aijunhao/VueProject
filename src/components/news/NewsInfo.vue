@@ -11,7 +11,7 @@
     <hr>
 
     <!-- 内容区 -->
-    <div class="content" v-html="news.zhaiyao"></div>
+    <div class="news-content" v-html="news.zhaiyao">{{ news.zhaiyao }}</div>
 
     <!-- 评论区 -->
     <comment-box :id="this.id"></comment-box>
@@ -75,7 +75,7 @@ export default {
   color: #a3a2a2;
 }
 
-.content img{
+.news-content img {
   width: 100%;
 }
 </style>

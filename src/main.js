@@ -3,21 +3,18 @@ import qs from 'qs'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-// import { Header, Swipe, SwipeItem, Button, Lazyload } from 'mint-ui'
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 import './lib/mui/css/mui.css'
 import './lib/mui/css/icons-extra.css'
 import axios from 'axios'
 import moment from 'moment'
+import VuePreview from 'vue2-preview'
 
 Vue.config.productionTip = false
-// Vue.component(Header.name, Header)
-// Vue.component(Swipe.name, Swipe)
-// Vue.component(SwipeItem.name, SwipeItem)
-// Vue.component(Button.name, Button)
-// Vue.use(Lazyload)
+
 Vue.use(MintUI)
+Vue.use(VuePreview)
 
 Vue.prototype.$qs = qs
 Vue.prototype.$axios = axios

@@ -123,7 +123,7 @@
 
 4. 使用 v-html 渲染内容数据，删除 style 标签的 scoped，修改内容图片大小。
 
-##  Comments.vue 评论子组件
+## Comments.vue 评论子组件
 
 1. 在 components 文件夹下创建 subcomponents 子文件夹，放置子组件模板，创建 comment.vue 评论子组件模板。
 
@@ -153,7 +153,7 @@
 
 5. 重载页面，清空评论 comments 列表和 msg 文本框，重置 pageIndex ，然后重新加载即可。
 
-## Photos.vue 图片页面
+## PhotoList.vue 图片页面
 
 1. 创建路由
 
@@ -165,7 +165,7 @@
 
 5. 父容器和子容器都需要具体大小，才能设置浮动。
 
-## Photos.vue 图片页面横向滚动组件改造
+## PhotoList.vue 图片页面横向滚动组件改造
 
 1. 设置激活状态颜色类 active 和默认颜色类 default，默认选中 id 为 defaultId === 0
 
@@ -173,5 +173,22 @@
 
 ## 图片列表区域
 
-1. 使用 `Mint-UI` 懒加载。
+1. 使用 `Mint-UI` 懒加载，注意懒加载需要导入整个 mint-ui 组件，所以修改 main.js ，将之前一些多的删掉。
 
+2. 编辑 css 样式
+
+3. axios 获取图片
+
+## 实现图片列表点击跳转图片详情页面
+
+将 li 改造成 router-link ，传递 图片 id ，并使用 tag 将默认渲染改成 li。
+
+## PhotoInfo.vue 详情页面
+
+1. 主体，参考 NewsInfo.vue
+
+2. 使用 vue2-preview 缩略图工具，需要安装
+
+## 修改 NewsInfo.vue 和 PhotoList.vue 之间的冲突问题。
+
+原先 Newsinfo.vue 中的 .content 为 div 的类，其内容为默认样式，子组件 img 宽度 100#； PhotoList.vue 中的 .content 为 ul 的类，设置其 li 为行内块元素。因为这两个类型相同，会发生冲突（可能是合并产生的问题），将它们设置不同的类名即可。
