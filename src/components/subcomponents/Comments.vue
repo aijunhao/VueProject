@@ -148,6 +148,6 @@ textarea {
   font-size: 15px;
   color: #bfbfbf;
   text-align: center;
-  margin: 20px auto;
+  margin: 10px auto;
 }
 </style>
