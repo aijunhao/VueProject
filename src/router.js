@@ -9,6 +9,7 @@ import NewsInfo from './components/news/NewsInfo.vue'
 import PhotoList from './components/photos/PhotoList.vue'
 import PhotoInfo from './components/photos/PhotoInfo.vue'
 import GoodsList from './components/goods/GoodsList.vue'
+import GoodsInfo from './components/goods/GoodsInfo.vue'
 
 Vue.use(Router)
 
@@ -55,7 +56,13 @@ export default new Router({
     {
       path: '/home/goodslist',
       component: GoodsList
+    },
+    {
+      path: '/home/goodsinfo/:id',
+      component: GoodsInfo,
+      props: true
     }
   ],
+  // 路由高亮类
   linkActiveClass: 'mui-active'
 })

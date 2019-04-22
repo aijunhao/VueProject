@@ -1,7 +1,7 @@
 <template>
   <div class="goods-list">
     <ul class="goods-wrapper">
-      <li class="goods-item" v-for="item in goodslist" :key="item._id">
+      <router-link :to="'/home/goodsinfo/' + item._id" tag="li" class="goods-item" v-for="item in goodslist" :key="item._id">
         <img class="goods-img" :src="item.img_url">
         <div class="goods-msg">
           <p class="goods-title">{{ item.title }}</p>
@@ -16,7 +16,7 @@
             </p>
           </div>
         </div>
-      </li>
+      </router-link>
     </ul>
     <p class="more" @click="getMore">加载更多</p>
   </div>
