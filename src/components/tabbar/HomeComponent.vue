@@ -1,10 +1,7 @@
 <template>
   <div>
-    <mt-swipe :auto="4000">
-      <mt-swipe-item v-for="item in swipeItemList" :key="item.url">
-        <img :src="item.img" alt>
-      </mt-swipe-item>
-    </mt-swipe>
+    <!-- 轮播图 -->
+    <swipe :swipeItemList="swipeItemList" :isfull="true"></swipe>
 
     <!-- 九宫格 -->
     <div class="mui-content">
@@ -52,6 +49,7 @@
 
 <script>
 import { Toast } from 'mint-ui';
+import swipe from '../subcomponents/Swipe.vue'
 
 export default {
   data() {
@@ -79,6 +77,9 @@ export default {
         }
       )
     }
+  },
+  components: {
+    swipe
   }
 }
 </script>

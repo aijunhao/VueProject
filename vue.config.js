@@ -9,7 +9,8 @@ module.exports = {
   devServer: {
     open: true,
     port: 4000,
-    // host: '192.168.43.49',
+    // wifi地址
+    host: '192.168.43.49',
     // 跨域请求
     proxy: {
       '/': {

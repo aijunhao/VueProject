@@ -10,11 +10,14 @@ import './lib/mui/css/icons-extra.css'
 import axios from 'axios'
 import moment from 'moment'
 import VuePreview from 'vue2-preview'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 
 Vue.config.productionTip = false
 
 Vue.use(MintUI)
 Vue.use(VuePreview)
+Vue.use(ElementUI)
 
 Vue.prototype.$qs = qs
 Vue.prototype.$axios = axios

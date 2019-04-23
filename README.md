@@ -13,7 +13,7 @@
     - “首页”按钮图标使用默认。
     - “搜索”按钮图标修改。
     - “会员”和“购物车”按钮图标使用额外的图标。
-    
+
     将 `MUI` 额外图标案例需要的“icons-extra.css”和“mui-icons-extra.ttf” 两个文件放入到“lib/mui”各自目录下，并在入口文件中导入。
 
 3. 在页面中间放置一个 `router-view` 来展示路由匹配到的组件。
@@ -193,7 +193,6 @@
 
 原先 Newsinfo.vue 中的 .content 为 div 的类，其内容为默认样式，子组件 img 宽度 100#； PhotoList.vue 中的 .content 为 ul 的类，设置其 li 为行内块元素。因为这两个类型相同，会发生冲突（可能是合并产生的问题），将它们设置不同的类名即可。
 
-
 ## 商品列表
 
 1. 实现经典两列商品列表页面及美化。
@@ -206,3 +205,29 @@
 
 3. 运行项目，在手机端输入相同网址即可。
 
+## 商品详情页面
+
+1. 配置路由
+
+2. 卡片页面，使用 card.html
+
+## 抽取轮播图组件
+
+1. 将首页中的轮播图组件单独封装到 `subcomponents` 中的 `Swipe.vue` 。
+
+2. 轮播图组件需要使用 props 传入两个参数，一个是 swipeItemList 图片列表，一个是 isfull 是否全屏
+
+3. 略微调整轮播图，使图片居中，并添加 isfull 类，使用对象形式绑定。
+
+## 引入 Element UI 库
+
+Element UI 兼容 vue-cli 3.x 会比 MUI 好很多。
+
+1. 下载 Element UI 库，`npm i -S element-ui`
+
+2. 在入口文件引入
+
+```js
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+```
