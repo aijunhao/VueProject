@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- 头部 -->
-    <mt-header fixed title="vue学习项目"></mt-header>
+    <mt-header fixed title="vue学习项目" style="z-index: 999"></mt-header>
     <!-- 过渡动画 -->
     <transition>
       <!-- 路由视图 -->
@@ -19,7 +19,7 @@
       </router-link>
       <router-link class="mui-tab-item" to="/shopcar">
         <span class="mui-icon mui-icon-extra mui-icon-extra-cart">
-          <span class="mui-badge">9</span>
+          <span class="mui-badge" id="badge" ref="badge">9</span>
         </span>
         <span class="mui-tab-label">购物车</span>
       </router-link>
@@ -49,8 +49,7 @@
   position: absolute;
 }
 
-.v-enter-active,
-.v-leave-active {
+.v-enter-active, .v-leave-active {
   transition: all 0.5s ease;
 }
 </style>

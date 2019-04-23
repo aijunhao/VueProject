@@ -219,7 +219,7 @@
 
 3. 略微调整轮播图，使图片居中，并添加 isfull 类，使用对象形式绑定。
 
-## 引入 Element UI 库
+## 引入 Element UI 库，实现商品信息页面计数器
 
 Element UI 兼容 vue-cli 3.x 会比 MUI 好很多。
 
@@ -231,3 +231,13 @@ Element UI 兼容 vue-cli 3.x 会比 MUI 好很多。
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 ```
+
+3. 在 GoodsInfo.vue 中添加 el-input-number 标签，实现计数器功能。
+
+4. 解决 Element-UI 计数器组件和 Mint-UI 组件中头部组件（App.vue） 的层级高度问题，将头部组件层级提高到 999 
+
+## 商品信息页面小球动画
+
+1. 首页提高层级为 2
+
+2. 需要获取小球和购物车上的角标的 dom 进行动画操作。
