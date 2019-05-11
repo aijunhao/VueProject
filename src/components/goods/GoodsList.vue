@@ -37,7 +37,7 @@ export default {
     getGoods() {
       this.$axios({
         method: 'get',
-        url: '/getgoods?pageindex=' + this.pageindex
+        url: this.$url + '/getgoods?pageindex=' + this.pageindex
       }).then(res => {
         console.log('成功', res)
         if (res.status === 200) {

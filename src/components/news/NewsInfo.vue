@@ -35,7 +35,7 @@ export default {
     getNewsInfo() {
       this.$axios({
         methods: 'get',
-        url: '/newsinfo/' + this.id,
+        url: this.$url + '/newsinfo/' + this.id,
       }).then(
         res => {
           this.news = res.data

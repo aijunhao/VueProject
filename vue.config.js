@@ -10,15 +10,15 @@ module.exports = {
     open: true,
     port: 4000,
     // wifi地址
-    host: '192.168.43.49',
+    host: '127.0.0.1',
     // 跨域请求
-    proxy: {
-      '/': {
-        target: 'http://127.0.0.1:5000',
-        ws: false,
-        changeOrigin: true
-      }
-    }
+    // proxy: {
+    //   'http://127.0.0.1:5000': {
+    //     target: 'http://127.0.0.1:5000',
+    //     ws: false,
+    //     changeOrigin: true
+    //   }
+    // }
   },
   // 第三方插件配置
   pluginOptions: {

@@ -36,7 +36,7 @@ export default {
     getNewsList() {
       this.$axios({
         methods: 'get',
-        url: '/newslist'
+        url: this.$url + '/newslist'
       }).then(
         res => {
           console.log('newslist 加载成功', res)

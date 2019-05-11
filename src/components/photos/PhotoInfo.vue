@@ -48,7 +48,7 @@ export default {
       console.log(this.id)
       this.$axios({
         method: 'get',
-        url: '/getphotoinfo/' + this.id
+        url: this.$url + '/getphotoinfo/' + this.id
       }).then(res => {
         console.log('成功', res.data)
         if (res.status === 200) {

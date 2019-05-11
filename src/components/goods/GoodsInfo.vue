@@ -79,12 +79,20 @@ export default {
     this.$refs.ball.style.top = `${top}px`
     this.$refs.ball.style.left = `${left}px`
   },
+  updated() {
+    // 初始化小球
+    var numberBox = this.$refs.number.getBoundingClientRect()
+    var top = numberBox.top + numberBox.height / 2
+    var left = numberBox.left + numberBox.width / 2
+    this.$refs.ball.style.top = `${top}px`
+    this.$refs.ball.style.left = `${left}px`
+  },
   methods: {
     // 获取轮播图
     getSwipe() {
       this.$axios({
         method: 'get',
-        url: '/swipeitems'
+        url: this.$url + '/swipeitems'
       }).then(
         res => {
           console.log('swipeitems 获取成功', res.data)

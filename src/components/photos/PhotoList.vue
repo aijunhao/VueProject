@@ -66,7 +66,7 @@ export default {
     getPhotoListByCateId(cateId) {
       this.$axios({
         method: 'get',
-        url: '/getphotolist/' + cateId
+        url: this.$url + '/getphotolist/' + cateId
       }).then(res => {
         if (res.status === 200) {
           console.log('photoList', res.data)

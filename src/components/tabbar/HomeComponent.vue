@@ -65,7 +65,7 @@ export default {
     getSwipe() {
       this.$axios({
         method: 'get',
-        url: '/swipeitems'
+        url: this.$url + '/swipeitems'
       }).then(
         res => {
           console.log('swipeitems 获取成功', res.data)

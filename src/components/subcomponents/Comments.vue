@@ -54,7 +54,7 @@ export default {
       console.log(this.id, this.pageIndex)
       this.$axios({
         methods: 'get',
-        url: '/getcomments/' + this.id + "?pageindex=" + this.pageIndex
+        url: this.$url + 'getcomments/' + this.id + "?pageindex=" + this.pageIndex
       }).then(res => {
         console.log(res.data)
         if (res.data.length) {
@@ -82,7 +82,7 @@ export default {
       }
       this.$axios({
         method: 'post',
-        url: '/postcomment',
+        url: this.$url + '/postcomment',
         data: {
           artid: this.id,
           content: this.msg.trim()

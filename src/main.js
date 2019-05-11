@@ -21,6 +21,7 @@ Vue.use(ElementUI)
 
 Vue.prototype.$qs = qs
 Vue.prototype.$axios = axios
+Vue.prototype.$url = 'http://127.0.0.1:5000'
 
 // 定义全局过滤器
 Vue.filter('dataFormat', function (dataStr, pattern = 'YYYY-MM-DD HH:mm:ss') {
